@@ -8,6 +8,7 @@ class Pessoa {
     String telefone
     String matricula
 
+
     static constraints = {
         nome nullable: false
         telefone nullable: false
