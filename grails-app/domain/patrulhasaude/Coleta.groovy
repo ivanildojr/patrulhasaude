@@ -13,8 +13,8 @@ class Coleta {
         circunferenciaAbd nullable: false
     }
 
-//    @Override
-//    String toString() {
-//        pessoa.nome
-//    }
+    @Override
+    String toString() {
+        pessoa.nome
+    }
 }
