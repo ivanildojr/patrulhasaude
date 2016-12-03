@@ -2,6 +2,8 @@
   <component name="FindSettings">
     <option name="customScope" value="Module 'PatrulhaSaude_main'" />
     <option name="defaultScopeName" value="Module 'PatrulhaSaude_main'" />
+    <option name="regularExpressions" value="true" />
+    <option name="REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="Module 'PatrulhaSaude_main'" />
   </component>
 </application>
