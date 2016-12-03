@@ -6,7 +6,7 @@ import patrulhasaude.seguranca.UserRole
 
 class BootStrap {
 
-    def init = {
+    def init = { servletContext ->
 
         def adminRole = new Role(authority: 'ROLE_ADMIN').save()
         def userRole = new Role(authority: 'ROLE_USER').save()

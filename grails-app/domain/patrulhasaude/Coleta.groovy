@@ -15,6 +15,6 @@ class Coleta {
 
     @Override
     String toString() {
-        pessoa.nome
+        if(pessoa) pessoa.nome
     }
 }
