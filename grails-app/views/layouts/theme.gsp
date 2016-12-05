@@ -23,7 +23,7 @@
     jQuery(function ($) {
         $("#grid").shieldGrid({
             dataSource: {
-                data: ${gridData}
+                data: <g:applyCodec encodeAs="none">${gridData}</g:applyCodec>
             },
             sorting:{
                 multiple: true

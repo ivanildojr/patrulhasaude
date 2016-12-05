@@ -21,7 +21,7 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     This theme page uses the Grid widget, part of the <a href="https://www.shieldui.com" target="_blank">Shield UI</a> JavaScript library.
                 </div>
-                <h1>${gridData}</h1>
+
                 <div id="grid"></div>
             </div>
         </div>

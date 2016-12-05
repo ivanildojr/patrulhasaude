@@ -19,13 +19,13 @@ class HelloController {
         h1.setName("Susiane")
         h1.setCompany("INEP")
         h1.setEmail("susiane.m@gmail.com")
-        def tabela = [h,h1] as JSON
-
+        def tabela = [h,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1,h1] as JSON
+        println tabela
         render(view:"index",model:[gridData:tabela])//[gridData: tabela]
     }
 
     def teste(){
-        def parametro = "ivanildo"
-        render(view:"teste",model:[gridData:parametro])
+
+        render(view:"teste")
     }
 }
