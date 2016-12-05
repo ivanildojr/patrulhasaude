@@ -2,7 +2,7 @@ package patrulhasaude
 
 class Servidor {
 
-    static belongsTo = [pessoa: Pessoa]
+    Pessoa pessoa
     String situacaoFuncional
     String lotacao
     String matricula
@@ -11,6 +11,12 @@ class Servidor {
     static constraints = {
         situacaoFuncional nullable: false
         lotacao nullable: false
-        matricula nullable: false
+        pessoa unique: true, nullable: false
+
+    }
+
+    @Override
+    String toString() {
+        if(pessoa) pessoa.nome
     }
 }

@@ -18,7 +18,7 @@ class Pessoa {
         cpf nullable: false, unique: true
         sexo nullable: false, inList: ["M", "F", "N"]
         dataNascimento nullable: false
-
+        servidor unique: true, nullable: true
         //coletas display:false
         //servidor display:false
     }

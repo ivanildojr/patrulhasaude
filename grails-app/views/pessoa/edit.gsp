@@ -29,7 +29,14 @@
             <g:form resource="${this.pessoa}" method="PUT">
                 <g:hiddenField name="version" value="${this.pessoa?.version}" />
                 <fieldset class="form">
-                    <f:all bean="pessoa"/>
+                    <f:field bean="pessoa" property="nome"/>
+                    <f:field bean="pessoa" property="telefone"/>
+                    <f:field bean="pessoa" property="cpf"/>
+                    <f:field bean="pessoa" property="sexo"/>
+                    <f:field bean="pessoa" property="dataNascimento"/>
+                    <f:field bean="pessoa" property="servidor" />
+                    <f:field bean="pessoa" property="cnhTipo"/>
+                    <f:field bean="pessoa" property="coletas"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
