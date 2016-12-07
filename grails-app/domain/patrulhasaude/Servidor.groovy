@@ -9,7 +9,7 @@ class Servidor {
 
 
     static constraints = {
-        situacaoFuncional nullable: false
+        situacaoFuncional nullable: false, inList: ["Policial","Administrativo", "Terceirizado", "Outros"]
         lotacao nullable: false
         pessoa unique: true, nullable: false
 

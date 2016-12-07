@@ -16,9 +16,10 @@ class Pessoa {
         nome nullable: false
         telefone nullable: false
         cpf nullable: false, unique: true
-        sexo nullable: false, inList: ["M", "F", "N"]
+        sexo nullable: false, inList: ["M", "F"]
         dataNascimento nullable: false
         servidor unique: true, nullable: true
+        cnhTipo inList: ["A", "B", "C", "D", "E"]
         //coletas display:false
         //servidor display:false
     }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="prf" />
-        <g:set var="entityName" value="${message(code: 'pessoa.label', default: 'Pessoa')}" />
+        <meta name="layout" content="main" />
+        <g:set var="entityName" value="${message(code: 'antropometria.label', default: 'Antropometria')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#edit-pessoa" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+        <a href="#edit-antropometria" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -14,29 +14,22 @@
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
-        <div id="edit-pessoa" class="content scaffold-edit" role="main">
+        <div id="edit-antropometria" class="content scaffold-edit" role="main">
             <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${this.pessoa}">
+            <g:hasErrors bean="${this.antropometria}">
             <ul class="errors" role="alert">
-                <g:eachError bean="${this.pessoa}" var="error">
+                <g:eachError bean="${this.antropometria}" var="error">
                 <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.pessoa}" method="PUT">
-                <g:hiddenField name="version" value="${this.pessoa?.version}" />
+            <g:form resource="${this.antropometria}" method="PUT">
+                <g:hiddenField name="version" value="${this.antropometria?.version}" />
                 <fieldset class="form">
-                    <f:field bean="pessoa" property="nome"/>
-                    <f:field bean="pessoa" property="telefone"/>
-                    <f:field bean="pessoa" property="cpf"/>
-                    <f:field bean="pessoa" property="sexo"/>
-                    <f:field bean="pessoa" property="dataNascimento"/>
-                    <f:field bean="pessoa" property="servidor" />
-                    <f:field bean="pessoa" property="cnhTipo"/>
-                    <f:field bean="pessoa" property="coletas"/>
+                    <f:all bean="antropometria"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />

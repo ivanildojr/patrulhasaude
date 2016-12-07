@@ -1,12 +1,9 @@
 package patrulhasaude
 
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
-
 class ColetaController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -107,4 +104,27 @@ class ColetaController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    /*Serviços para Regras de Negócio da APlicação*/
+
+    def coletaService
+
+    def consumoAlcool(String frequenciaConsumo, String dosePorVez){
+        println frequenciaConsumo + " - " + dosePorVez
+
+        Coleta coleta = new Coleta()
+        coleta.frequenciaConsumo = frequenciaConsumo
+        coleta.dosePorVez = dosePorVez
+
+        if(frequenciaConsumo && dosePorVez){
+
+            coleta = coletaService.consumoAlcool(coleta,"M")
+            render coleta.classificacaoEtilismo
+        }else{
+            render "erro"
+
+        }
+
+    }
+
 }
